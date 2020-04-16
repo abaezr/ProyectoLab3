@@ -18,6 +18,7 @@ public class Asientos {
     ArrayList<Float> listaPrecios = new ArrayList<Float>();
     ArrayList<Float> registroPrecios = new ArrayList<Float>();
     int cantidadAsientosVendidos = 0;
+    int asientosTotalesDispobinles =450;
     Asientos(){}
     void llenadoMatriz(){
         for(int i=0;i<15;i++){
