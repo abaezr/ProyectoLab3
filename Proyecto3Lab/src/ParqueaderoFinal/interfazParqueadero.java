@@ -26,6 +26,10 @@ public class interfazParqueadero extends javax.swing.JFrame {
     public int ts;
     public int contadorBoton=0;
     public  int ni=0;
+    public int indice=0;
+    int cantidadCarros=0;
+    int cantidadMotos=0;
+    int cantidadBicicletas=0;
     public  int nc=26;
     public String tipoVehiculo;
     public String placaVehiculo;
@@ -312,16 +316,37 @@ public class interfazParqueadero extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-  
-        vehiculo.listaVehiculos.add(contadorBoton, new Vehiculo());    
+
+        if(cantidadCarros<12||cantidadMotos<8||cantidadBicicletas<6){
+            vehiculo.listaVehiculos.add(contadorBoton, new Vehiculo());    
         vehiculo.listaVehiculos.get(contadorBoton).tiempoDeIngreso=ti;
         vehiculo.listaVehiculos.get(contadorBoton).vehiculoEnParqueadero=true;
         vehiculo.listaVehiculos.get(contadorBoton).tipoDeVehiculo=jComboBox1.getSelectedItem().toString();
         vehiculo.listaVehiculos.get(contadorBoton).placaDeVehiculo=jTextField1.getText();       
         contadorBoton++;
+        }
+        
+         if(cantidadCarros>11&&jComboBox1.getSelectedIndex()==0){
+            JOptionPane.showMessageDialog(null, "CUPO DE CARROS AL MAXIMO");        
+         }else if(vehiculo.listaVehiculos.get(indice).tipoDeVehiculo.equals("Carro")&&vehiculo.listaVehiculos.get(indice).vehiculoEnParqueadero==true&&jComboBox1.getSelectedIndex()==0)
+             cantidadCarros++;        
+           if(cantidadMotos>7&&jComboBox1.getSelectedIndex()==1){
+            JOptionPane.showMessageDialog(null, "CUPO DE MOTOS AL MAXIMO");           
+    }else if (vehiculo.listaVehiculos.get(indice).tipoDeVehiculo.equals("Moto")&&vehiculo.listaVehiculos.get(indice).vehiculoEnParqueadero==true&&jComboBox1.getSelectedIndex()==1)
+            cantidadMotos++;
+           if(cantidadBicicletas>5&&jComboBox1.getSelectedIndex()==2){
+            JOptionPane.showMessageDialog(null, "CUPO DE BICICLETAS");            
+           }else if (vehiculo.listaVehiculos.get(indice).tipoDeVehiculo.equals("Bicicleta")&&vehiculo.listaVehiculos.get(indice).vehiculoEnParqueadero==true&&jComboBox1.getSelectedIndex()==2)
+             cantidadBicicletas++;         
+           indice++;    
+        
         if(ti>22||ti<6){
            JOptionPane.showMessageDialog(null, "Parqueadero fuera de servicio");
        }
+        System.out.println(cantidadCarros);
+        
+        
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -363,6 +388,8 @@ public class interfazParqueadero extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         nc++;
+        int horaNocturna=ts-18;
+        int horaDiurna=18-ti;
         int gananciaTotal=0;
         if(ts>22&&ts<6){
            JOptionPane.showMessageDialog(null, "Parqueadero fuera de servicio");
@@ -381,30 +408,42 @@ public class interfazParqueadero extends javax.swing.JFrame {
             vehiculo.listaVehiculos.get(i).vehiculoEnParqueadero=false;
             switch(opc){
                 case "Carro" : 
+                cantidadCarros--;
                 if(vehiculo.listaVehiculos.get(i).tiempoTotal>=10){
-                    vehiculo.listaVehiculos.get(i).costoTotal=13000;
+                    vehiculo.listaVehiculos.get(i).costoTotal=13000;                 
                 }else if(ts<18)
-                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*75;
-                else 
-                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*80;
+                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*4500;
+                else if(horaNocturna>0&&horaDiurna>0){
+                vehiculo.listaVehiculos.get(i).costoTotal=horaDiurna*4500+horaNocturna*4800;
+                }else 
+                  vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*4800;
                 break;
+                
                 case "Moto":
+                 cantidadMotos--;
                 if(vehiculo.listaVehiculos.get(i).tiempoTotal>=10){
                 vehiculo.listaVehiculos.get(i).costoTotal=13000;
                 }else if(ts<18)
-                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*20;
-                else 
-                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*25;
+                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*1200;
+                 else if(horaNocturna>0&&horaDiurna>0){
+                vehiculo.listaVehiculos.get(i).costoTotal=horaDiurna*1200+horaNocturna*1500;
+                }else 
+                  vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*1500;
                 break;
+                
                 case "Bicicleta":
+                 cantidadBicicletas--;
                 if(vehiculo.listaVehiculos.get(i).tiempoTotal>=10){
                     vehiculo.listaVehiculos.get(i).costoTotal=13000;
                 }else if(ts<18)
-                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*10;
-                else 
-                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*15;
-            }
+                vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*600;
+                 else if(horaNocturna>0&&horaDiurna>0){
+                vehiculo.listaVehiculos.get(i).costoTotal=horaDiurna*600+horaNocturna*900;
+                }else 
+                  vehiculo.listaVehiculos.get(i).costoTotal=vehiculo.listaVehiculos.get(i).tiempoTotal*900;
+                break;
         }        
+            }
         }
         
         
@@ -465,7 +504,7 @@ public class interfazParqueadero extends javax.swing.JFrame {
     void llenadoLista(){
         lista.removeAllElements();
         for(int i=0;i<vehiculo.listaVehiculos.size();i++){      
-        lista.addElement(vehiculo.listaVehiculos.get(i).tipoDeVehiculo + " " +vehiculo.listaVehiculos.get(i).placaDeVehiculo +" "+ vehiculo.listaVehiculos.get(i).tiempoDeIngreso + " "+vehiculo.listaVehiculos.get(i).tiempoDeSalida+ " "+vehiculo.listaVehiculos.get(i).tiempoTotal );
+        lista.addElement(vehiculo.listaVehiculos.get(i).tipoDeVehiculo + "    " +vehiculo.listaVehiculos.get(i).placaDeVehiculo +" "+ vehiculo.listaVehiculos.get(i).tiempoDeIngreso + "    "+vehiculo.listaVehiculos.get(i).tiempoDeSalida+ "    "+vehiculo.listaVehiculos.get(i).tiempoTotal + "    "+vehiculo.listaVehiculos.get(i).costoTotal);
         }     
     }
     
