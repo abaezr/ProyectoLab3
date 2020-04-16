@@ -174,7 +174,7 @@ public class interfazParqueadero extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
-        jLabel3.setText("Tipo    Placa    Entrada    Salida    T.total");
+        jLabel3.setText("Tipo    Placa    Entrada    Salida    T.total   Precio");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -220,10 +220,12 @@ public class interfazParqueadero extends javax.swing.JFrame {
                                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
                                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -242,6 +244,8 @@ public class interfazParqueadero extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton8)
                 .addGap(14, 14, 14)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -259,10 +263,7 @@ public class interfazParqueadero extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
                             .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -342,11 +343,7 @@ public class interfazParqueadero extends javax.swing.JFrame {
         
         if(ti>22||ti<6){
            JOptionPane.showMessageDialog(null, "Parqueadero fuera de servicio");
-       }
-        System.out.println(cantidadCarros);
-        
-        
-        
+       }                          
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -504,16 +501,10 @@ public class interfazParqueadero extends javax.swing.JFrame {
     void llenadoLista(){
         lista.removeAllElements();
         for(int i=0;i<vehiculo.listaVehiculos.size();i++){      
-        lista.addElement(vehiculo.listaVehiculos.get(i).tipoDeVehiculo + "    " +vehiculo.listaVehiculos.get(i).placaDeVehiculo +" "+ vehiculo.listaVehiculos.get(i).tiempoDeIngreso + "    "+vehiculo.listaVehiculos.get(i).tiempoDeSalida+ "    "+vehiculo.listaVehiculos.get(i).tiempoTotal + "    "+vehiculo.listaVehiculos.get(i).costoTotal);
+        lista.addElement(vehiculo.listaVehiculos.get(i).tipoDeVehiculo + "     " +vehiculo.listaVehiculos.get(i).placaDeVehiculo +"      "+ vehiculo.listaVehiculos.get(i).tiempoDeIngreso + "      "+vehiculo.listaVehiculos.get(i).tiempoDeSalida+ "     "+vehiculo.listaVehiculos.get(i).tiempoTotal + "     "+vehiculo.listaVehiculos.get(i).costoTotal);
         }     
     }
-    
-    
-    
-    
-    
-    
-    
+     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
