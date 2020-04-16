@@ -14,15 +14,10 @@ import java.util.ArrayList;
 
 public class Asientos {
     String matrizAsientos[][] = new String[15][30];
-    
-  
     ArrayList<String> listaAsientosOcupados = new ArrayList<String>();
     ArrayList<Float> listaPrecios = new ArrayList<Float>();
     ArrayList<Float> registroPrecios = new ArrayList<Float>();
-      Asientos(){}
-    
-    
-    
+    Asientos(){}
     void llenadoMatriz(){
         for(int i=0;i<15;i++){
             for(int j=0;j<30;j++){
@@ -54,6 +49,9 @@ public class Asientos {
             suma+=registroPrecios.get(i);
         }
         return suma;
+    }
+    void cambioLista(ArrayList<Float> lista){
+        this.listaPrecios = lista;
     }
 }
 
