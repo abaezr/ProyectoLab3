@@ -76,80 +76,79 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
-                                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="btnIngresoAutomatico" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="lbl1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lbl3" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblFila" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lbl2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="btnIngresoAutomatico" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="txtPrecioPersonalizado" max="32767" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="btnIngresarPrecio" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="txtIncremento" alignment="0" max="32767" attributes="0"/>
-                                                              <Component id="txtPrecioAutomatico" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                                          <Component id="btnIngresarPrecioAutomatico" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="btnPersonalizado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="lbl1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="lbl3" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="lblFila" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="txtPrecioPersonalizado" max="32767" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="btnIngresarPrecio" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                                  <Component id="txtIncremento" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="txtPrecioAutomatico" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                                              <Component id="btnIngresarPrecioAutomatico" min="-2" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <Component id="btnPersonalizado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace min="0" pref="3" max="32767" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                          <Component id="lblj" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                              <Component id="lblj" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblb" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblc" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbld" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="lble" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblf" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblg" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblh" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="lblk" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbll" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblm" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbln" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblo" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbli" alignment="1" min="-2" pref="11" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblb" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblc" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbld" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="lble" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblf" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblg" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblh" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="lblk" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbll" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblm" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbln" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblo" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbli" alignment="1" min="-2" pref="11" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jScrollPane1" min="-2" pref="614" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" min="-2" pref="614" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
