@@ -17,6 +17,7 @@ public class Asientos {
     ArrayList<String> listaAsientosOcupados = new ArrayList<String>();
     ArrayList<Float> listaPrecios = new ArrayList<Float>();
     ArrayList<Float> registroPrecios = new ArrayList<Float>();
+    int cantidadAsientosVendidos = 0;
     Asientos(){}
     void llenadoMatriz(){
         for(int i=0;i<15;i++){
@@ -29,6 +30,7 @@ public class Asientos {
         String asiento = fila+String.valueOf(columna+1);
         listaAsientosOcupados.add(asiento);
         matrizAsientos[((int)fila)-65][columna] = "#";
+        cantidadAsientosVendidos++;
     }
     void preciosPersonalizados(float prec){
         listaPrecios.add(prec);
@@ -49,9 +51,6 @@ public class Asientos {
             suma+=registroPrecios.get(i);
         }
         return suma;
-    }
-    void cambioLista(ArrayList<Float> lista){
-        this.listaPrecios = lista;
     }
 }
 
