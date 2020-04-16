@@ -129,7 +129,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
 
     private void btnParqueaderoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnParqueaderoActionPerformed
         // TODO add your handling code here:
-      Parqueadero.InterfazParqueadero parq = new Parqueadero.InterfazParqueadero();
+      ParqueaderoFinal.interfazParqueadero parq = new ParqueaderoFinal.interfazParqueadero();
       parq.setVisible(true);
     }//GEN-LAST:event_btnParqueaderoActionPerformed
 
