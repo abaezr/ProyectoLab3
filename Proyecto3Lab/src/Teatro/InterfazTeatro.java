@@ -261,7 +261,7 @@ public class InterfazTeatro extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jListaAsientos);
 
-        btnBoletasVendidas.setText("BOLETAS VENDIDAS");
+        btnBoletasVendidas.setText("ASIENTOS VENDIDOS");
         btnBoletasVendidas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBoletasVendidasActionPerformed(evt);
@@ -377,7 +377,6 @@ public class InterfazTeatro extends javax.swing.JFrame {
                                 .addGroup(lblaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(lblaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(lblaLayout.createSequentialGroup()
                                         .addGap(30, 30, 30)
